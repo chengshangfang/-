@@ -27,7 +27,6 @@ namespace 热电比拟
     /// </summary>
     public partial class MainWindow : Window
     {
-//程止方
         #region 导入动态库
         [DllImport("CHIDClass.dll")]
         private static extern int GetNumberOfDevice();
