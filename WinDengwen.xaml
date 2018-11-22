@@ -1,0 +1,605 @@
+﻿<Window x:Class="热电比拟.WinDengwen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:热电比拟"
+        mc:Ignorable="d"
+        Title="等温线图" Height="593.2" Width="781.6" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" ResizeMode="NoResize" FontSize="20">
+    <Window.Resources>
+        <Style x:Key="Wendutbl" TargetType="{x:Type TextBlock}" >
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Margin" Value="1"/>
+        </Style>
+        <Style x:Key="nbrt" TargetType="{x:Type Rectangle}" >
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Stroke" Value="Red"/>
+            <Setter Property="StrokeThickness" Value="0.5"/>
+        </Style>
+        <Style x:Key="wbrt" TargetType="{x:Type Rectangle}" >
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Stroke" Value="White"/>
+            <Setter Property="StrokeThickness" Value="0.5"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+
+        <!--<Image Source="denwentu.png"/>-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+           
+            <Canvas Name="cvdwx" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="20,20,0,0"/>
+            <StackPanel  Margin="20,20,0,0" Orientation="Horizontal">
+                <StackPanel >
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla7" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla8" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla9" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla10" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla11" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbla12" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel >
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblb1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb7" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb8" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb9" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb10" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb11" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblb12" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel >
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblc1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc7" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc8" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc9" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc10" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc11" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblc12" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel >
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbld1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld7" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld8" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld9" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld10" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld11" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbld12" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel >
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tble1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble7" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble8" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble9" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble10" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble11" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tble12" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel >
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblf1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf7" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf8" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf9" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf10" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf11" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblf12" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1"  Margin="0,20,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblg1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblh1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbli1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblj1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblk1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbll1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblm1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tbln1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblo1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource wbrt}"/>
+                        <TextBlock Name="tblp1" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblg2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblh2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbli2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblj2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblk2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbll2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblm2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbln2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblo2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblp2" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblg3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblh3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbli3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblj3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblk3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbll3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblm3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbln3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblo3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblp3" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblg4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblh4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbli4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblj4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblk4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbll4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblm4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbln4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblo4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblp4" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblg5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblh5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbli5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblj5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblk5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbll5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblm5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbln5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblo5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblp5" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblg6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblh6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbli6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblj6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblk6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbll6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblm6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tbln6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblo6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Rectangle Style="{StaticResource nbrt}"/>
+                        <TextBlock Name="tblp6" Style="{StaticResource Wendutbl}" />
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+            <Grid Grid.Column="2" Name="grdwdxian" Margin="0,0,0.2,251.8" ></Grid>
+        </Grid>
+    </Grid>
+</Window>
